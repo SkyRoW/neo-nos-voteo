@@ -1,5 +1,5 @@
-# Voteo - Decentralized voting app for NEO blockchain
-Smart-Contract v1
+# Smart-contract for Voteo - Decentralized voting app for NEO blockchain
+smart-contract v1
 
 In order to build and test this smart-contract local NEO blockchain needs to be set-up at first.
 
