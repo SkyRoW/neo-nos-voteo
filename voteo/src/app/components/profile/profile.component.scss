@@ -1,0 +1,64 @@
+@import '../../../lib/styles/colors';
+
+.wrapper {
+  border: 1px solid $color-bitcoach-gold;
+  box-shadow: 1px 1px 1px 1px $color-shadow;
+  border-radius: 8px;
+  position: relative;
+  text-align: center;
+}
+
+.profile-picture {
+  padding: 10px;
+
+  img {
+    height: 150px;
+    width: 150px
+  }
+}
+
+.name {
+  font-size: 26px;
+}
+
+.validated {
+  width: 26px;
+  height: 26px;
+}
+
+.detail {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: auto;
+  border: 1px solid $color-bitcoach-border;
+  border-radius: 10px;
+
+  input {
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    text-align:left;
+    border: 0px;
+    user-select: none;
+    border-bottom: 1px solid $color-bitcoach-border;
+    outline: none !important;
+    cursor: pointer;
+  }
+}
+
+.row {
+  display: block;
+  padding: 5px;
+  text-align: left;
+  margin: auto;
+  border-bottom: 1px solid $color-bitcoach-border;
+  word-wrap: break-word;
+
+  &:last-child {
+    border-bottom: 0px;
+  }
+}
+
+.information {
+  padding: 10px 0px;
+}

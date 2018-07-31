@@ -1,0 +1,27 @@
+<div class="actions row">
+  <app-pool-action-element
+    [picture]="'assets/img/pools.png'"
+    [label]="'pools.types.create'" class="col-4 action">
+    <div class="create" (click)="createPool()">
+        <span class="img-fluid">
+          <img src="assets/img/create.png">
+        </span>
+      {{'pools.createNew' | translate}}
+    </div>
+    <div>{{'pools.or' | translate}}</div>
+  </app-pool-action-element>
+  <app-pool-action-element
+    [picture]="'assets/img/vote.png'"
+    [label]="'pools.types.vote'"
+    [redirectLink]="'/pools'"
+    class="col-4 action">
+    {{'pools.noPending' | translate}}
+  </app-pool-action-element>
+
+  <app-pool-action-element
+    [picture]="'assets/img/public_pools.png'"
+    [label]="'pools.types.public'" class="col-4 action"
+    [redirectLink]="'/publicpools'">
+    {{'pools.public' | translate: numberOfPools}}
+  </app-pool-action-element>
+</div>

@@ -1,0 +1,48 @@
+@import '../../../lib/styles/colors';
+
+.options, mat-radio-group {
+  display: block;
+  width: 100%;
+
+  input {
+    display: inline-block;
+    width: 40%;
+  }
+}
+
+mat-checkbox, mat-radio-button {
+  display: inline-block;
+  width: 40%;
+}
+
+.actions {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.pool-title {
+  font-size: 28px;
+}
+
+.question-name {
+  padding: 5px;
+  width: 100%;
+  color: $color-white !important;
+  background-color: $color-bitcoach-gold;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.question {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin: 10px 0px;
+}
+
+.options {
+  padding: 10px;
+  border: .5px solid $color-bitcoach-border;
+  border-top: 0px;
+}

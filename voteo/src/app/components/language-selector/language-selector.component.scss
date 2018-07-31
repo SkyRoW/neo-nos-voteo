@@ -1,0 +1,40 @@
+@import '../../../lib/styles/colors';
+
+.selected {
+  color: $color-white;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    color: $color-bitcoach-azure;
+  }
+}
+
+.panel {
+  display: block;
+  position:absolute;
+  z-index: 99;
+  transition: all 1s;
+  overflow: hidden;
+
+  &.closed {
+    max-height: 0px;
+  }
+}
+
+.language-panel {
+  display: block;
+  cursor: pointer;
+  background-color: $color-white;
+  padding: 10px;
+
+  .item {
+    cursor: pointer;
+    color: $color-bitcoach-blue;
+    padding: 5px;
+
+    &:hover {
+      color: $color-bitcoach-azure;
+    }
+  }
+}

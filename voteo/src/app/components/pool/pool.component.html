@@ -1,0 +1,29 @@
+<div class="pool-wrapper">
+  <div class="pool-title voteo-bold">{{pool.name}}</div>
+  <form (ngSubmit)="submitForm()">
+    <div class="question" *ngFor="let question of pool.questions">
+      <div class="voteo-bold question-name">{{question.name}}</div>
+      <div class="options">
+
+        <ng-container *ngIf="question.multiple; else singleOption">
+          <mat-checkbox *ngFor="let option of question.options">{{option.label}}</mat-checkbox>
+        </ng-container>
+
+        <ng-template #singleOption>
+          <mat-radio-group>
+            <mat-radio-button *ngFor="let option of question.options"
+                              class="example-margin" [value]="option.label">{{option.label}}
+            </mat-radio-button>
+          </mat-radio-group>
+        </ng-template>
+
+        <ng-container *ngIf="question.openEnded">
+          <input class="freeText">
+        </ng-container>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="voteo-button">{{'actions.submit' | translate}}</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,20 @@
+<div class="wrapper" [ngClass]="{'hovered': hovered}">
+  <div class="content">
+    <div class="icon">
+      <img class="img-fluid" [src]="picture">
+    </div>
+
+    <div class="action-name voteo-bold">
+      {{label | translate}}
+    </div>
+
+    <div class="details">
+      <ng-content></ng-content>
+    </div>
+
+    <div class="button-wrapper">
+      <button (click)="redirectToPage()" class="voteo-bold">{{'actions.viewAll' | translate}}</button>
+    </div>
+  </div>
+
+</div>

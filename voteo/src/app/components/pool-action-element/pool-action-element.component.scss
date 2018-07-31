@@ -1,0 +1,50 @@
+@import '../../../lib/styles/colors';
+
+:host{
+  &:hover {
+    transform: scale(1.2);
+    z-index: 10;
+    background-color: white !important;
+  }
+}
+
+.wrapper {
+  margin: 2px;
+  border: 1px solid $color-bitcoach-gold;
+  background-color: $color-bitcoach-gray;
+  text-align: center;
+  height: 100%;
+
+  &.hovered {
+    background-color: white;
+  }
+}
+
+.action-name {
+  font-size: 20px;
+  color: $color-bitcoach-blue;
+}
+
+.content {
+  padding-bottom: 10px;
+  height: 100%;
+}
+
+img {
+  height: 150px;
+  margin: 60px 0px;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid $color-bitcoach-blue;
+  border-radius: 2px;
+  box-shadow: 1px $color-shadow;
+  color: $color-bitcoach-blue;
+  background: linear-gradient(to right, $color-white , $color-bitcoach-extralightblue);
+
+  &:hover {
+    color: $color-white;
+    background: linear-gradient(to right, $color-bitcoach-lightBlue , $color-bitcoach-blue);
+  }
+}

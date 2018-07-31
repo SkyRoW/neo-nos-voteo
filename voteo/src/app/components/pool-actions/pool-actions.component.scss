@@ -1,0 +1,30 @@
+@import '../../../lib/styles/colors';
+
+:host {
+  display: block;
+  position: relative;
+}
+
+.action {
+  padding: 0 !important;
+  transition: all .4s;
+}
+
+.actions {
+  margin: 50px 0px 0px 20px;
+}
+
+.create {
+  display: block;
+  cursor: pointer;
+
+  img {
+    width: 18px;
+    height: 18px;
+  }
+
+  &:hover {
+    color: $color-bitcoach-blue;
+    text-decoration: underline;
+  }
+}

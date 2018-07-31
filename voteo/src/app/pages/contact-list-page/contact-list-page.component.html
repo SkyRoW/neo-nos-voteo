@@ -1,0 +1,6 @@
+<div class="list">
+  <app-profile class="item"
+               *ngFor="let contact of contacts$ | async"
+                [profile]="contact"
+                [pictureSize]="100"></app-profile>
+</div>

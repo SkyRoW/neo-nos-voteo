@@ -1,0 +1,88 @@
+@import '../../../lib/styles/colors';
+
+.logo-wrapper {
+  float: left;
+  margin: 5px 35px 5px 15px;
+  cursor: pointer;
+
+  .name {
+    font-size: 32px;
+    color: $color-bitcoach-gold;
+  }
+}
+
+.gold {
+  color: $color-bitcoach-gold;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.item {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px 25px;
+
+  &:hover {
+    color: $color-bitcoach-azure;
+  }
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  padding-right: 10px;
+  height: 100%;
+  position: relative;
+  justify-content: center;
+  cursor: pointer;
+
+  span {
+    text-align: left;
+  }
+}
+
+.bitcoach-menu {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper {
+  color: $color-white;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to right, $color-bitcoach-lightBlue , $color-bitcoach-blue);
+}
+
+.col-4, span {
+  outline: none !important;
+}
+
+mat-select {
+  border: 0px;
+}
+
+mat-form-field {
+  display: block;
+
+  .mat-select-value-text {
+    color: $color-white !important;
+  }
+}
+
+.language {
+  margin:auto;
+}
+
+.language-wrapper {
+  margin: auto;
+  display: inline-block;
+}
+
+.logo {
+  height: 50px;
+}

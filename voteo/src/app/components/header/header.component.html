@@ -1,0 +1,26 @@
+<div class="wrapper">
+  <div class="row">
+    <div class="col-7 menu">
+      <div class="logo-wrapper">
+        <img routerLink="/" class="logo" src="assets/img/voteologobiele.png">
+      </div>
+      <!--<span  class="item">{{'header.profile' | translate}}</span>-->
+      <span routerLink="/contacts" class="item">{{'header.contactList' | translate}}</span>
+      <span routerLink="/about" class="item">{{'header.about' | translate}}<span class="gold">{{'header.title' | translate}}</span></span>
+    </div>
+
+    <div class="col-4">
+      <div routerLink="/profile" class="user">
+        <span class="gold">Kamil bitcoach</span>
+        <span class="address">{{address}}</span>
+      </div>
+    </div>
+    <div class="col-1 menu">
+      <app-language-selector
+        [languages]="languages"
+        [selectedLanguage]="selectedLanguage"
+        (onSelectChange)="changeLanguage($event)">
+      </app-language-selector>
+    </div>
+  </div>
+</div>

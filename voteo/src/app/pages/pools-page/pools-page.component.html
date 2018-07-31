@@ -1,0 +1,4 @@
+<div class="pools-wrapper">
+  <span>{{'pools.active' | translate}}</span>
+  <app-pool-tile class="pool-item" *ngFor="let pool of pools$ | async" [pool]="pool"></app-pool-tile>
+</div>

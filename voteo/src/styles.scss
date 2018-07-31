@@ -1,0 +1,155 @@
+/* You can add global styles to this file, and also import other style files */
+@import './lib/styles/_font.scss';
+@import "./lib/styles/voteo-theme";
+@import 'lib/styles/_colors.scss';
+
+html, body {
+  height: 100%;
+  overflow-x: hidden
+}
+
+body {
+  font-family: BrochaLight !important;
+
+  * {
+    font-family: BrochaLight !important;
+  }
+}
+
+h1 {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+// splash screen
+.center-title {
+  font-family: BrochaRegular !important;
+  font-size: 72px;
+  margin: auto;
+  color: $color-bitcoach-blue;
+}
+
+.splash-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.powered-by {
+  position: absolute;
+  display: flex;
+  right: 20px;
+  bottom: 40px;
+
+  .label {
+    font-family: BrochaLight !important;
+    font-size: 18px;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
+.powered-by img {
+  width: 164px;
+  height: 164px;
+}
+// end of splash screen
+
+.voteo-bold {
+  font-family: BrochaRegular !important;
+}
+
+.voteo-button {
+  cursor: pointer;
+  border: 1px solid $color-bitcoach-blue;
+  border-radius: 2px;
+  box-shadow: 1px $color-shadow;
+  color: $color-white;
+  background: linear-gradient(to right, $color-bitcoach-lightBlue, $color-bitcoach-blue);
+
+  &:hover {
+    color: $color-bitcoach-blue;
+    background: linear-gradient(to right, $color-white, $color-bitcoach-extralightblue);
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    color: $color-bitcoach-blue;
+    background: linear-gradient(to right, $color-white, $color-bitcoach-extralightblue);
+
+    &:hover {
+      color: $color-bitcoach-blue;
+      background: linear-gradient(to right, $color-white, $color-bitcoach-extralightblue);
+    }
+  }
+}
+
+strong em {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.voteo-table {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: auto;
+  border: 1px solid $color-bitcoach-border;
+  border-radius: 10px;
+
+  input {
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    text-align:left;
+    border: 0px;
+    user-select: none;
+    border-bottom: 1px solid $color-bitcoach-border;
+    outline: none !important;
+    cursor: pointer;
+  }
+}
+
+.voteo-row {
+  display: block;
+  padding: 5px;
+  text-align: left;
+  margin: auto;
+  border-bottom: 1px solid $color-bitcoach-border;
+  word-wrap: break-word;
+
+  &:last-child {
+    border-bottom: 0px;
+  }
+}
+
+@media (max-width: 700px) {
+  .col-8 {
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  .content {
+    padding-top: 10px;
+
+    .col-4 {
+      padding-top: 20px;
+      margin: auto;
+      max-width: 80% !important;
+      flex: 0 0 100% !important;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .col-4 {
+    padding: 10px;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+}

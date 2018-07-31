@@ -1,0 +1,65 @@
+@import '../../../lib/styles/colors';
+
+.column {
+  display: inline-block;
+  width: 50%;
+  border-right: 1px solid $color-bitcoach-border;
+
+  &:last-child {
+    border-right: 0px;
+  }
+}
+
+.key {
+  color: $color-bitcoach-blue;
+  font-family: BrochaBold;
+}
+
+.highlight .key {
+  color: $color-white !important;
+}
+
+.highlight {
+  color: $color-white !important;
+  background-color: $color-bitcoach-blue;
+
+  &:first-child {
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+  }
+}
+
+.value {
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.button-wrapper {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button:nth-child(n-1) {
+    margin-left: 10px;
+  }
+}
+
+.voteo-table {
+  margin-bottom: 10px;
+}
+
+
+.message {
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 30px;
+  background-color: $color-bitcoach-gray;
+  border: 1px solid $color-bitcoach-red;
+}

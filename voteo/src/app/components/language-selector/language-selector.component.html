@@ -1,0 +1,9 @@
+<div (click)="togglePanel()" class="selected">{{'language.'+selectedLanguage | translate}}</div>
+
+<div class="panel" [ngClass]="{'closed': !isOpened}">
+  <div class="language-panel">
+    <div class="item" (click)="changeSelection(language)"
+         *ngFor="let language of languages">{{'language.'+language | translate}}
+    </div>
+  </div>
+</div>

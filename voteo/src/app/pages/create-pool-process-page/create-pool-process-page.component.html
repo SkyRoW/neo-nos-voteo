@@ -1,0 +1,55 @@
+<mat-horizontal-stepper [linear]="true" #stepper>
+  <mat-step [stepControl]="questionsForm">
+    <form>
+      <ng-template matStepLabel>{{'pools.createQuestions' | translate}}</ng-template>
+      <app-new-question-page [question]="currentQuestion"
+                             [numberOfQuestions]="numberOfQuestions"
+                             [currentQuestionIndex]="currentIndex"
+                             (afterNextQuestionPressed)="setNextQuestion($event)"
+                             (afterPreviousQuestionPressed)="setPreviousQuestion($event)"
+                             (afterClickOnRemove)="removeCurrentQuestion($event)"
+                             (onUpdate)="questionsUpdate($event)">
+        <button class="voteo-button" mat-button matStepperNext>Next</button>
+      </app-new-question-page>
+      <div>
+
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="settingsForm">
+    <form>
+      <ng-template matStepLabel>{{'pools.poolSettings' | translate}}</ng-template>
+      <app-pool-settings (onUpdate)="settingUpdate($event)">
+        <div class="button-wrapper">
+          <button class="voteo-button" mat-button matStepperPrevious>Back</button>
+          <button class="voteo-button" mat-button matStepperNext>Next</button>
+        </div>
+      </app-pool-settings>
+    </form>
+  </mat-step>
+  <mat-step>
+    <form>
+      <ng-template matStepLabel>{{'pools.summary' | translate}}</ng-template>
+      <app-pool-summary [pool]="pool"
+                        (onSubmitPressed)="createPool()"
+                        (onBackPressed)="goToEdit()">
+        <div class="button-wrapper">
+          <button class="voteo-button" mat-button matStepperPrevious>Back</button>
+          <button class="voteo-button" mat-button [disabled]="!hasQuestions" (click)="createPool()">{{'pools.create.message' | translate}}</button>
+        </div>
+      </app-pool-summary>
+      <div>
+
+      </div>
+    </form>
+  </mat-step>
+  <!--<mat-step>-->
+    <!--<ng-template matStepLabel>{{'pools.done' | translate}}</ng-template>-->
+    <!--{{'pools.confirmation' | translate}}-->
+    <!--<div>-->
+      <!--<button mat-button matStepperPrevious>Back</button>-->
+      <!--<button mat-button [disabled]="!hasQuestions" (click)="createPool()">{{'pools.create.message' | translate}}</button>-->
+      <!--<button mat-button (click)="stepper.reset()">Reset</button>-->
+    <!--</div>-->
+  <!--</mat-step>-->
+</mat-horizontal-stepper>

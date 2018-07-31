@@ -1,0 +1,102 @@
+@import '../../../lib/styles/colors';
+
+.question-name {
+  width: 100%;
+}
+
+form {
+  margin: 0px 20px 10px 20px;
+}
+
+mat-slide-toggle {
+  font-size: 14px;
+  color: $color-bitcoach-blue;
+}
+
+.wrapper {
+  margin: 0px 20px;
+  z-index: 100;
+}
+.parameters {
+  .param {
+    padding: 10px 30px;
+  }
+  .label {
+    padding-left: 10px;
+  }
+}
+
+.option {
+  display: flex;
+  padding-bottom: 5px;
+
+  .label {
+    font-size: 12px;
+    width: 15%;
+    margin: auto;
+  }
+  input {
+    width: 85%;
+  }
+}
+
+.submit {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+
+  button {
+    margin: 5px;
+  }
+}
+
+.add-option {
+  font-size: 12px;
+}
+
+.left {
+  font-size:32px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  border-right: 0px !important;
+  box-shadow: 1px 1px 1px 1px $color-shadow;
+
+}
+
+.right {
+  font-size: 32px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: -22px;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  //border-left: 0px !important;
+  box-shadow: 1px 1px 1px 1px $color-shadow;
+
+}
+
+.switch-btn {
+  background-color: white;
+  color: $color-bitcoach-blue;
+  user-select: none;
+
+  &:hover {
+    background-color: $color-bitcoach-extralightblue
+  }
+}
+
+.content {
+  position: relative;
+}

@@ -1,0 +1,88 @@
+<div class="wrapper">
+  <div class="header">{{'pools.newPool' | translate}}</div>
+  <div class="title voteo-bold">{{'pools.summary' | translate}}</div>
+  <div *ngIf="questions.length > 0; else noQuestions" class="voteo-table">
+    <ng-container *ngFor="let question of questions">
+      <div class="highlight voteo-row">
+        <span class="column key">{{'pools.create.name' | translate}}</span>
+        <span class="column value">{{question?.name}}</span>
+      </div>
+      <div class="voteo-row">
+        <span class="column key">{{'pools.create.openEnded' | translate}}</span>
+        <span class="column value">{{question?.openEnded}}</span>
+      </div>
+      <div class="voteo-row">
+        <span class="column key">{{'pools.create.multiple' | translate}}</span>
+        <span class="column value">{{question?.multiple}}</span>
+      </div>
+      <div *ngFor="let option of question?.options; let i=index" class="voteo-row">
+        <span class="column key">{{'pools.create.option' | translate}} {{i}}</span>
+        <span class="column value">{{option.label}}</span>
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="voteo-table">
+    <div class="highlight voteo-row">
+      {{'pools.create.settings' | translate}}
+    </div>
+    <ng-container *ngIf="settings">
+      <div class="voteo-row">
+        <span class="column key">{{'pools.settings.public' | translate}}</span>
+        <span class="column value">{{settings?.public}}</span>
+      </div>
+      <div class="voteo-row">
+        <span class="column key">{{'pools.settings.verification' | translate}}</span>
+        <span class="column value">{{settings?.verification}}</span>
+      </div>
+      <div class="voteo-row">
+        <span class="column key">{{'pools.settings.startDate' | translate}}</span>
+        <span class="column value">{{settings?.startDate | localizedDate}}</span>
+      </div>
+      <div class="voteo-row">
+        <span class="column key">{{'pools.settings.endDate' | translate}}</span>
+        <span class="column value">{{settings?.endDate | localizedDate}}</span>
+      </div>
+      <ng-container *ngIf="settings.reward">
+        <div class="voteo-row">
+          <span class="column key">{{'pools.settings.totalReward' | translate}}</span>
+          <span class="column value">{{settings?.totalReward}}</span>
+        </div>
+        <div class="voteo-row">
+          <span class="column key">{{'pools.settings.totalBudget' | translate}}</span>
+          <span class="column value">{{settings?.totalBudget}}</span>
+        </div>
+        <div class="voteo-row">
+          <span class="column key">{{'pools.settings.participans' | translate}}</span>
+          <span class="column value">{{settings?.participans}}</span>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="settings.tokenRequirements">
+        <div class="voteo-row">
+          <span class="column key">{{'pools.settings.tokenType' | translate}}</span>
+          <span class="column value">{{settings?.tokenType}}</span>
+        </div>
+        <div class="voteo-row">
+          <span class="column key">{{'pools.settings.minimumAmount' | translate}}</span>
+          <span class="column value">{{settings?.minimumAmount}}</span>
+        </div>
+        <div class="voteo-row">
+          <span class="column key">{{'pools.settings.tokensPerVote' | translate}}</span>
+          <span class="column value">{{settings?.tokensPerVote}}</span>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+
+  <div class="button-wrapper">
+    <ng-content></ng-content>
+    <!--<button (click)="back()" class="voteo-button">{{'actions.back' | translate}}</button>-->
+    <!--<button (click)="submit()" class="voteo-button">{{'actions.submit' | translate}}</button>-->
+  </div>
+</div>
+
+<ng-template #noQuestions>
+  <div class="message">
+    {{'pools.noQuestions' | translate}}
+  </div>
+</ng-template>

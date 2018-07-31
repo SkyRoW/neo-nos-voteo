@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'BrochaBold';
+  src: url("/assets/fonts/Brocha-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BrochaRegular';
+  src: url("/assets/fonts/Brocha-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BrochaLight';
+  src: url('/assets/fonts/Brocha-Light.ttf') format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'BrochaBook';
+  src: url('/assets/fonts/Brocha-Book.ttf') format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}

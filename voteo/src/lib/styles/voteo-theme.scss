@@ -1,0 +1,76 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$mat-abus-primary: (
+  50 : #e0e4e7,
+  100 : #b3bcc3,
+  200 : #808f9c,
+  300 : #4d6274,
+  400 : #264056,
+  500 : #001e38,
+  600 : #001a32,
+  700 : #00162b,
+  800 : #001224,
+  900 : #000a17,
+  A100 : #5781ff,
+  A200 : #245aff,
+  A400 : #003cf0,
+  A700 : #0036d6,
+  contrast:
+    (
+      50 : #000,
+      100 : #000,
+      200 : #000,
+      300 : #fff,
+      400 : #fff,
+      500 : #fff,
+      600 : #fff,
+      700 : #fff,
+      800 : #fff,
+      900 : #fff,
+      A100 : #000,
+      A200 : #fff,
+      A400 : #fff,
+      A700 : #fff
+    )
+);
+
+$mat-abus-secondary: (
+  50 : #e1ab05,
+  100 : #e1ab05,
+  200 : #e1ab05,
+  300 : #e1ab05,
+  400 : #e9af05,
+  500 : #e1ab05,
+  600 : #e1ab05,
+  700 : #e1ab05,
+  800 : #e1ab05,
+  900 : #e1ab05,
+  A100 : rgba(244, 190, 5, 0.8),
+  A200 : #e1ab05,
+  A400 : #e1ab05,
+  A700 : #e1ab05,
+  contrast:
+    (
+      50 : #000,
+      100 : #000,
+      200 : #000,
+      300 : #fff,
+      400 : #fff,
+      500 : #fff,
+      600 : #fff,
+      700 : #fff,
+      800 : #fff,
+      900 : #fff,
+      A100 : #000,
+      A200 : #fff,
+      A400 : #fff,
+      A700 : #fff
+    )
+);
+
+$custom-primary: mat-palette($mat-abus-primary);
+$custom-accent: mat-palette($mat-abus-secondary, 500);
+$custom-theme: mat-light-theme($custom-primary, $custom-accent);
+@include angular-material-theme($custom-theme);

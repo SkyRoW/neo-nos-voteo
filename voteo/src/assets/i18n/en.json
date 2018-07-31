@@ -1,0 +1,78 @@
+{
+  "header": {
+    "title": ".voteo",
+    "profile": "my profile",
+    "contactList": "contact list",
+    "about": "about",
+    "actions": {
+      "logout": "Logout"
+    }
+  },
+  "actions" : {
+    "viewAll": "view all",
+    "submit": "submit",
+    "continue": "continue",
+    "back": "back",
+    "delete": "remove"
+  },
+  "pools": {
+    "settings": {
+      "public": "Public",
+      "private": "Private",
+      "verification": "Kind of verification",
+      "startDate": "Start date",
+      "endDate": "End date",
+      "reward": "is reward?",
+      "totalReward": "Total reward",
+      "totalBudget": "Budget",
+      "participans": "Participans",
+      "tokenRequirements": "Token requirements",
+      "minimumAmount": "Minimum amount",
+      "tokensPerVote": "Token per vote",
+      "tokenType": "Token type",
+      "audianceSpecification": "Audiance specification"
+    },
+    "noQuestions": "No questions where created yet!",
+    "createQuestions": "Create questions",
+    "poolSettings": "PoolSettings",
+    "publicPools": "Public pools",
+    "done": "Done",
+    "active": "Active pools",
+    "createNew": "Create a new pool",
+    "or": "or",
+    "noPending": "there are no pending pools",
+    "public": "There are {{numberOfPools}} live public pools",
+    "question": "Question",
+    "questions": "Questions",
+    "types" : {
+      "create" : "Create pool",
+      "vote": "Vote",
+      "public": "Public pools"
+    },
+    "newPool": "Create new pool",
+    "newQuestion": "New question",
+    "create": {
+      "settings": "Pool settings",
+      "name": "question name",
+      "openEnded": "open-ended",
+      "openEndedHint": "(set possible answers)",
+      "multiple": "multiple choices",
+      "option": "option",
+      "addOption": "Add option",
+      "message": "Create",
+      "confirmation": "Click for create"
+    },
+    "youHaveGotAssigned": "You have got {{number}} assigned pools",
+    "youHaveCreated": "You have created {{number}} of pools",
+    "voted": "Voted",
+    "vote": "vote",
+    "summary": "Pool summary"
+  },
+  "profile": {
+    "contacts": "contacts"
+  },
+  "language": {
+    "sk": "Slovak",
+    "en": "English"
+  }
+}

@@ -1,0 +1,38 @@
+@import '../../../lib/styles/colors';
+
+.tile-wrapper {
+  border: .5px solid $color-bitcoach-border;
+}
+
+.upper-part {
+  background-color: $color-bitcoach-blue;
+  border: .5px solid $color-bitcoach-blue;
+  color: $color-white;
+}
+
+.bottom-part {
+  position: relative;
+  display: flex;
+  width: 100%;
+
+  .actions {
+    width: 30%;
+    display: inline-block;
+    margin: 5px;
+    height: 28px;
+  }
+
+}
+
+.question-count {
+  display: inline-block;
+  width: 35%;
+}
+
+.voters {
+  width: 35%;
+}
+
+.title {
+  color: $color-white;
+}

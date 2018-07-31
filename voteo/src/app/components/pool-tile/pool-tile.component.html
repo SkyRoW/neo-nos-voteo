@@ -1,0 +1,12 @@
+<div class="tile-wrapper">
+  <div class="upper-part">
+    <span class="title voteo-bold">{{poolTitle}}</span>
+  </div>
+  <div class="bottom-part">
+    <span class="question-count">{{'pools.questions' | translate}}:{{numberOfQuestions}}</span>
+    <span class="voters">{{'pools.voted' | translate}}: {{voted}}/{{neededVoters}}</span>
+    <div class="actions">
+      <button [disabled]="!hasFreeVoting" class="voteo-button" (click)="openVoting()">{{'pools.vote' | translate}}</button>
+    </div>
+  </div>
+</div>

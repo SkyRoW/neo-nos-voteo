@@ -1,0 +1,39 @@
+<div class="content">
+  <div class="right switch-btn voteo-bold" (click)="getNextQuestion(createQuestionForm)">{{operation}}</div>
+  <div *ngIf="currentQuestionIndex > 0" class="left switch-btn" (click)="getPreviousQuestion(createQuestionForm)"><</div>
+  <div class="wrapper">
+    <div class="header">{{'pools.newPool' | translate}}</div>
+    <form [formGroup]="createQuestionForm">
+      <div class="title voteo-bold">{{'pools.question' | translate}} {{currentQuestionIndex + 1}}/{{numberOfQuestions + 1}}</div>
+      <input class="question-name" formControlName="name">
+
+      <div class="parameters">
+        <mat-slide-toggle class="param" formControlName="openEnded">
+          <span class="label voteo-bold">{{'pools.create.openEnded' | translate}}</span>
+          <span class="hint">{{'pools.create.openEndedHint' | translate}}</span>
+        </mat-slide-toggle>
+        <mat-slide-toggle class="param" formControlName="multiple">
+          <span class="label voteo-bold">{{'pools.create.multiple' | translate}}</span>
+        </mat-slide-toggle>
+      </div>
+
+      <fieldset formArrayName="options">
+        <button class="voteo-button add-option" type="button" (click)="addOption()">{{'pools.create.addOption' |
+          translate}}
+        </button>
+        <div class="" *ngFor="let option of options.controls; let j=index"
+             [formGroupName]="j">
+          <div class="option">
+            <span class="label">{{'pools.create.option' | translate}} {{j}}:</span>
+            <input class="question-name" formControlName="label">
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="submit">
+        <button *ngIf="currentQuestionIndex > 0" type="button" (click)="removeCurrentQuestion()" class="voteo-button">{{'actions.delete' | translate}}</button>
+        <ng-content></ng-content>
+      </div>
+    </form>
+  </div>
+</div>
